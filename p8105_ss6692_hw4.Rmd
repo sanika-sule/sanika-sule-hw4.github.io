@@ -1,0 +1,12 @@
+---
+title: "Sanika Sule HW 4"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: cerulean
+---
+
+# A little bit about Sanika
+
+
