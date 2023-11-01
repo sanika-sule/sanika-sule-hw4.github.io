@@ -1,0 +1,14 @@
+name: "Sanika Sule HW 4"
+output_dir: "."
+navbar:
+  title: "Home"
+  right:
+    - text: "About"
+      href: about.html
+    - icon: fa-envelope fa-lg
+      href: mailto:<sanika.sule@youremail.com>
+    - icon: fa-github fa-lg
+      href: http://github.com/sanika-sule/
+output:
+  html_document:
+    theme: cerulean

@@ -1,0 +1,15 @@
+---
+title: "Sanika Sule HW 4"
+output: 
+  html_document:
+    toc: true
+    toc_float: true 
+---
+
+# A little bit about Sanika
+
+**My academic and professional summary**
+
+
+This is a link to [my github](https://github.com/sanika-sule).
+Here is a link to the [about](about.html) page.
