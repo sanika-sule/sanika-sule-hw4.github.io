@@ -1,11 +1,47 @@
 ---
-title: "About this website"
+title: "Resume"
 output: 
   html_document:
     toc: true
     toc_float: true 
 ---
 
-# About me!
+### Education 
+**Columbia University, Anticipated Graduation May 2024**
 
-Sanika is a student. 
+*MPH, Sociomedical Sciences
+
+*Applied Biostatistics and Public Health Data Science
+ 
+**The University of Texas at Austin, Graduated May 2021** 
+
+* BS, Public Health
+
+* BA, French 
+
+### Professional Experience	
+**Care and Protection of Children Learning Network - Research Assistant; September 2023-Present**
+
+* Edited three advisory documents for the World Bank, detailing child protection-centered approaches for infrastructure projects in Uganda 
+
+* Curated the online resource hub for the newly designed website
+
+**Gender, Adolescent Transitions, and Environment Program - Research Assistant; June 2023 - August 2023**
+
+* Developed two qualitative codebooks for global puberty and menstruation accessibility studies
+
+* Analyzed and coded qualitative data for two studies
+
+* Transcribed six interviews for the  global public toilets accessibility study
+
+* Developed weekly Twitter and LinkedIn communications for GATE’s social media
+
+**Arthur Ashe Institute for Urban Health - Program Coordinator; April 2021 - June 2023** 
+
+* Designed and facilitated two workshops weekly for 80+ high school students on subjects including health disparities, scientific writing, and college readiness
+Manage administrative tasks including consultant invoicing and budget tracking
+
+* Edited two successful grant proposals that funded our after-school program
+
+* Assisted on a knowledge, attitude, and behavior survey focused on COVID-19 in central Brooklyn
+

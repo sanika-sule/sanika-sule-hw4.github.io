@@ -1,15 +1,16 @@
 ---
-title: "Sanika Sule HW 4"
+title: "Sanika Sule P8105 HW 4"
 output: 
   html_document:
     toc: true
     toc_float: true 
 ---
 
-# A little bit about Sanika
+## Who is Sanika?
 
-**My academic and professional summary**
+Sanika is a second-year MPH student in Columbia Mailman School of Public Health's Sociomedical Sciences Department and is earning a certificate in Applied Biostatistics. Her prior experiences focus on community health education and health equity promotion. Sanika is passionate about empowering her community with public health knowledge. She is enjoying improving her skills in RStudio, and a sample of her work can by found [here](https://github.com/sanika-sule). In her free time, Sanika enjoys yoga, taking long walks, and trying new food! 
+
+**To learn more about Sanika's background, visit the [about](about.html) page!**
+ 
 
 
-This is a link to [my github](https://github.com/sanika-sule).
-Here is a link to the [about](about.html) page.
