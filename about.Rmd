@@ -9,9 +9,9 @@ output:
 ### Education 
 **Columbia University, Anticipated Graduation May 2024**
 
-*MPH, Sociomedical Sciences
+* MPH, Sociomedical Sciences
 
-*Applied Biostatistics and Public Health Data Science
+* Applied Biostatistics and Public Health Data Science
  
 **The University of Texas at Austin, Graduated May 2021** 
 
