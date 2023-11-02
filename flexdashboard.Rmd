@@ -63,12 +63,12 @@ filter(
     !is.na(grade))
 ```
 
-Column {data-width=650}
+ {data-width=650}
 -----------------------------------------------------------------------
 
 ### Restaurant coordinates by restaurant name and inspection grade
 
-```{r inspection_scatter_plot, message=FALSE}
+```{r inspection_scatter_plot, echo=FALSE, warning=FALSE}
 nyc_inspections_cleaned |>
   mutate(text_label = str_c("\nGrade:", grade, "\nRestaurant:", restaurant)) |> 
   plot_ly(
@@ -76,12 +76,12 @@ nyc_inspections_cleaned |>
     color = ~grade, text = ~text_label, alpha = 0.5)
 ```
 
-Column {data-width=350}
+ {data-width=350}
 -----------------------------------------------------------------------
 
 ### Inspection score distribution by borough
 
-```{r inspection_box_plot, message=FALSE}
+```{r inspection_box_plot, echo=FALSE, warning=FALSE}
 nyc_inspections_cleaned |> 
   mutate(boro = fct_reorder(boro, score)) |> 
   plot_ly(y = ~score, color = ~boro, type = "box", colors = "viridis")
@@ -90,7 +90,7 @@ nyc_inspections_cleaned |>
 ### Cuisine type distribution
 
 
-```{r inspection_bar_chart, message=FALSE}
+```{r inspection_bar_chart, echo=FALSE, warning = FALSE}
 nyc_inspections_cleaned |> 
   count(cuisine_description) |> 
   mutate(cuisine_description = fct_reorder(cuisine_description, n)) |> 

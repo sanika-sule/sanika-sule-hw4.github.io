@@ -12,5 +12,10 @@ Sanika is a second-year MPH student in Columbia Mailman School of Public Health'
 
 **To learn more about Sanika's background, visit the [about](about.html) page!**
  
+### Meet Sanika's best friend, Ringo!
 
+![](images/ringo_1.jpg)
 
+![](images/ringo_2.jpg)
+
+![](images/ringo_3.jpg)
