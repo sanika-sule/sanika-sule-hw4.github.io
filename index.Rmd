@@ -8,7 +8,7 @@ output:
 
 ## Who is Sanika?
 
-Sanika is a second-year MPH student in Columbia Mailman School of Public Health's Sociomedical Sciences Department and is earning a certificate in Applied Biostatistics. Her prior experiences focus on community health education and health equity promotion. Sanika is passionate about empowering her community with public health knowledge. She is enjoying improving her skills in RStudio, and a sample of her work can by found [here](https://github.com/sanika-sule), or in her work making plots using [plotly](plotly.html). In her free time, Sanika enjoys yoga, taking long walks, and trying new food! 
+Sanika is a second-year MPH student in Columbia Mailman School of Public Health's Sociomedical Sciences Department and is earning a certificate in Applied Biostatistics. Her prior experiences focus on community health education and health equity promotion. Sanika is passionate about empowering her community with public health knowledge. She is enjoying improving her skills in RStudio, and a sample of her work can by found [here](https://github.com/sanika-sule), or in her work making plots using [plotly](flexdashboard.html). In her free time, Sanika enjoys yoga, taking long walks, and trying new food! 
 
 **To learn more about Sanika's background, visit the [about](about.html) page!**
  

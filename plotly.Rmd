@@ -67,11 +67,22 @@ filter(
 
 ```{r inspection_scatter_plot}
 nyc_inspections_cleaned |>
-  mutate(text_label = str_c("\nGrade:", grade, "\nrestaurant:", restaurant)) |> 
+  mutate(text_label = str_c("\nGrade:", grade, "\nRestaurant:", restaurant)) |> 
   plot_ly(
     x = ~latitude, y = ~longitude, type = "scatter", mode = "markers",
     color = ~grade, text = ~text_label, alpha = 0.5)
 ```
 
+```{r inspection_box_plot}
+nyc_inspections_cleaned |> 
+  mutate(boro = fct_reorder(boro, score)) |> 
+  plot_ly(y = ~score, color = ~boro, type = "box", colors = "viridis")
+```
 
+```{r}
+nyc_inspections_cleaned |> 
+  count(cuisine_description) |> 
+  mutate(cuisine_description = fct_reorder(cuisine_description, n)) |> 
+  plot_ly(x = ~cuisine_description, y = ~n, color = ~cuisine_description, type = "bar", colors = "viridis")
+```
 
