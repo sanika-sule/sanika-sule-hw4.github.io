@@ -5,8 +5,8 @@ navbar:
   right:
     - text: "About"
       href: about.html
-    - text: "Plotly"
-      href: plotly.html 
+    - text: "Flexdashboard"
+      href: flexdashboard.html 
     - icon: fa-envelope fa-lg
       href: mailto:<sanika.sule@youremail.com>
     - icon: fa-github fa-lg

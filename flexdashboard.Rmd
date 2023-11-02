@@ -1,0 +1,99 @@
+---
+title: "NYC Restaurant Inspection Plots"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(dplyr)
+library(tidyverse)
+library(plotly)
+library(httr)
+library(jsonlite)
+
+get_all_inspections = function(url) {
+  
+  all_inspections = vector("list", length = 0)
+  
+  loop_index = 1
+  chunk_size = 50000
+  DO_NEXT = TRUE
+  
+  while (DO_NEXT) {
+    message("Getting data, page ", loop_index)
+    
+    all_inspections[[loop_index]] = 
+      GET(url,
+          query = list(`$order` = "zipcode",
+                       `$limit` = chunk_size,
+                       `$offset` = as.integer((loop_index - 1) * chunk_size)
+                       )
+          ) %>%
+      content("text") %>%
+      fromJSON() %>%
+      as_tibble()
+    
+    DO_NEXT = dim(all_inspections[[loop_index]])[1] == chunk_size
+    loop_index = loop_index + 1
+  }
+  
+  all_inspections
+  
+}
+
+url = "https://data.cityofnewyork.us/resource/43nn-pn8j.json"
+
+nyc_inspections = 
+  get_all_inspections(url) %>%
+  bind_rows() 
+
+data(nyc_inspections)
+
+nyc_inspections_cleaned = 
+  nyc_inspections |> 
+  janitor::clean_names()|>
+  select(
+    boro, zipcode, inspection_date, dba, cuisine_description, score, grade,latitude, longitude) |>
+
+rename (restaurant = dba)|>
+filter(
+    !is.na(grade))
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r inspection_scatter_plot}
+nyc_inspections_cleaned |>
+  mutate(text_label = str_c("\nGrade:", grade, "\nRestaurant:", restaurant)) |> 
+  plot_ly(
+    x = ~latitude, y = ~longitude, type = "scatter", mode = "markers",
+    color = ~grade, text = ~text_label, alpha = 0.5)
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r inspection_box_plot}
+nyc_inspections_cleaned |> 
+  mutate(boro = fct_reorder(boro, score)) |> 
+  plot_ly(y = ~score, color = ~boro, type = "box", colors = "viridis")
+```
+
+### Chart C
+
+
+```{r inspection_bar_chart}
+nyc_inspections_cleaned |> 
+  count(cuisine_description) |> 
+  mutate(cuisine_description = fct_reorder(cuisine_description, n)) |> 
+  plot_ly(x = ~cuisine_description, y = ~n, color = ~cuisine_description, type = "bar", colors = "viridis")
+```
+
